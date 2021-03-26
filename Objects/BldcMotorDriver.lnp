@@ -1,0 +1,16 @@
+--cpu=Cortex-M4.fp.sp
+".\objects\main.o"
+".\objects\init.o"
+".\objects\delay.o"
+".\objects\print.o"
+".\objects\debug.o"
+".\objects\complex.o"
+".\objects\list.o"
+".\objects\dmatransfer.o"
+".\objects\bluetooth.o"
+".\objects\startup_stm32f446xx.o"
+".\objects\system_stm32f4xx.o"
+--strict --scatter ".\Objects\BldcMotorDriver.sct"
+--summary_stderr --info summarysizes --map --load_addr_map_info --xref --callgraph --symbols
+--info sizes --info totals --info unused --info veneers
+--list ".\Listings\BldcMotorDriver.map" -o .\Objects\BldcMotorDriver.axf
